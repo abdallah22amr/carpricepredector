@@ -168,7 +168,7 @@ with st.sidebar:
 # Prediction: Using a styled prediction card
 if st.button("Predict Price"):
     prediction = model.predict(input_df)[0]
-    st.markdown(f"<div class='prediction-card'>Predicted price : LE {prediction:,.2f}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='prediction-card'>Predicted price : {prediction:,.2f} LE</div>", unsafe_allow_html=True)
     st.balloons()
 
 # Footer
