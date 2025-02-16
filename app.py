@@ -128,7 +128,6 @@ with col2:
 
 # Raw Input DataFrame
 raw_input = pd.DataFrame([{
-    "power_kw": power_kw,
     "power_ps": power_ps,
     "fuel_consumption_l_100km.1": fuel_consumption,
     "mileage_in_km": mileage,
@@ -146,7 +145,7 @@ input_dummies = pd.get_dummies(raw_input, columns=categorical_columns, drop_firs
 input_df = input_dummies.reindex(columns=expected_columns, fill_value=0)
 
 # Scale numerical features
-numerical_columns = ["power_kw", "power_ps", "fuel_consumption_l_100km.1", "mileage_in_km", "vehicle_age"]
+numerical_columns = ["power_ps", "fuel_consumption_l_100km.1", "mileage_in_km", "vehicle_age"]
 input_df[numerical_columns] = scaler.transform(input_df[numerical_columns])
 
 # Sidebar: Read-Only Car Specifications Summary
