@@ -143,11 +143,11 @@ raw_input = pd.DataFrame([{
 # One-Hot Encoding for Categorical Features
 categorical_columns = ["brand", "model", "color", "transmission_type", "fuel_type"]
 input_dummies = pd.get_dummies(raw_input, columns=categorical_columns, drop_first=True)
-input_df = input_dummies.reindex(columns=expected_columns2, fill_value=0)
+input_df = input_dummies.reindex(columns=expected_columns, fill_value=0)
 
 # Scale numerical features
 numerical_columns = ["power_kw", "power_ps", "fuel_consumption_l_100km.1", "mileage_in_km", "vehicle_age"]
-input_df[numerical_columns] = scaler2.transform(input_df[numerical_columns])
+input_df[numerical_columns] = scaler.transform(input_df[numerical_columns])
 
 # Sidebar: Read-Only Car Specifications Summary
 with st.sidebar:
