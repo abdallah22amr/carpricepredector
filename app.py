@@ -44,7 +44,7 @@ st.markdown(
          left: 0 !important;
          right: 0 !important;
          bottom: 0 !important;
-         background: rgba(0, 0, 0, 0.85) !important;
+         background: rgba(0, 0, 0, 0.75) !important;
          z-index: -1 !important;
     }
     
