@@ -107,7 +107,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Used Car Price Predictor")
+st.title(" Car Price Predictor")
 
 # Input Fields in Main Area
 st.markdown("### Enter Car Specifications")
