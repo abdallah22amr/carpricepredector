@@ -116,7 +116,9 @@ with col1:
     brand_input = st.selectbox("Brand", data["brand"].unique().tolist())
     models_for_brand = data[data["brand"] == brand_input]["model"].unique().tolist()
     model_input = st.selectbox("Model", models_for_brand)
-    power_ps = st.number_input("Power (PS)", min_value=50, value=150)
+    power_ps_for_brand = data[data["power_ps"] == brand_input]["brand"].unique().tolist()
+    power_ps = st.selectbox("Power (PS)", power_ps_for_brand)
+    # power_ps = st.number_input("Power (PS)", min_value=50, value=150)
     color_input = st.selectbox("Color", data["color"].unique().tolist())
     power_kw = power_ps*0.735 
 with col2:
